@@ -32,19 +32,13 @@ clean:
 	rm -rf build
 	rm -rf dist
 
-publish: clean
-	mkdir -p build
-	npm run publish 2> /dev/null
-
-serve: update-examples
-	npm run serve
+serve: npm run serve
 
 check-licenses:
 	npm run check-licenses
 	scripts/check_python_licenses.sh
 
-deploy-proxy: update-examples
-	scripts/deploy_proxy.sh
+deploy-proxy: scripts/deploy_proxy.sh
 
 format:
 	poetry run black **/*.py
