@@ -4,6 +4,7 @@ install: install-node install-python install-fhir-validator install-hooks
 
 install-python:
 	poetry install
+	pip install python-jwt
 
 install-node:
 	npm install
