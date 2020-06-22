@@ -63,9 +63,6 @@ jobs:
             "$(Agent.OS)" | "node" | package-lock.json
             "$(Agent.OS)" | "node"
 
-      - bash: 'echo "##vso[task.setvariable variable=SPEC_VERSION]$(poetry run python scripts/calculate_version.py)"'
-        displayName: Set SPEC_VERSION
-
       - bash: "make install"
         displayName: Install repo
 
@@ -76,4 +73,4 @@ jobs:
         displayName: Build Release Package
 
       - publish: dist/
-        artifact: unattended-access-poc-$(SPEC_VERSION)+$(Build.BuildNumber)
+        artifact: unattended-access-poc+$(Build.BuildNumber)
