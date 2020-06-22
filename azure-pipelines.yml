@@ -73,4 +73,4 @@ jobs:
         displayName: Build Release Package
 
       - publish: dist/
-        artifact: unattended-access-poc-$(SPEC_VERSION)+$(Build.BuildNumber)
+        artifact: unattended-access-poc+$(Build.BuildNumber)
