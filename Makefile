@@ -16,17 +16,17 @@ install-fhir-validator:
 	mkdir -p bin
 	test -f bin/org.hl7.fhir.validator.jar || curl https://fhir.github.io/latest-ig-publisher/org.hl7.fhir.validator.jar > bin/org.hl7.fhir.validator.jar
 
-test:
-	npm run test
+# test:
+# 	npm run test
 
-lint:
-	npm run lint
-	cd sandbox && npm run lint && cd ..
-	poetry run flake8 **/*.py
-	find -name '*.sh' | grep -v node_modules | xargs shellcheck
+# lint:
+# 	npm run lint
+# 	cd sandbox && npm run lint && cd ..
+# 	poetry run flake8 **/*.py
+# 	find -name '*.sh' | grep -v node_modules | xargs shellcheck
 
-validate: generate-examples
-	java -jar bin/org.hl7.fhir.validator.jar build/examples/**/*application_fhir+json*.json -version 4.0.1 -tx n/a | tee /tmp/validation.txt
+# validate: generate-examples
+# 	java -jar bin/org.hl7.fhir.validator.jar build/examples/**/*application_fhir+json*.json -version 4.0.1 -tx n/a | tee /tmp/validation.txt
 
 clean:
 	rm -rf build
