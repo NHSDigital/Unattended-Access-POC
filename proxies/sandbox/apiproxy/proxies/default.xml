@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<ProxyEndpoint name="default">
+    <PreFlow name="PreFlow">
+        <Request>
+            <Step>
+                <Name>Decode-JWT</Name>
+            </Step>
+            <Step>
+                <Name>verify-api-key</Name>
+            </Step>
+            <Step>
+                <Name>Verify-JWT</Name>
+            </Step>
+        </Request>
+        <Response/>
+    </PreFlow>
+    <Flows/>
+    <HTTPProxyConnection>
+        <BasePath>{{ SERVICE_BASE_PATH }}</BasePath>
+        <VirtualHost>secure</VirtualHost>
+    </HTTPProxyConnection>
+    <RouteRule name="sandbox">
+        <TargetEndpoint>sandbox</TargetEndpoint>
+    </RouteRule>
+</ProxyEndpoint>

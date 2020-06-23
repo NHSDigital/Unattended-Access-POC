@@ -69,17 +69,8 @@ jobs:
       - bash: "make check-licenses"
         displayName: Check licenses
 
-#      - bash: "make lint"
-#        displayName: Lint
-
-      - bash: "make publish"
-        displayName: Compile Spec
-
-      - bash: 'echo "##vso[task.setvariable variable=SPEC_VERSION]$(poetry run python scripts/calculate_version.py)"'
-        displayName: Set SPEC_VERSION
-
       - bash: "make release"
         displayName: Build Release Package
 
       - publish: dist/
-        artifact: unattended-access-poc-$(SPEC_VERSION)+$(Build.BuildNumber)
+        artifact: unattended-access-poc+$(Build.BuildNumber)

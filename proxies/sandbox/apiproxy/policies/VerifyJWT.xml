@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<VerifyJWT async="false" continueOnError="false" enabled="true" name="Verify-JWT">
+    <DisplayName>Verify JWT</DisplayName>
+    <Algorithm>RS256</Algorithm>
+    <PublicKey>
+        <Value>-----BEGIN PUBLIC KEY----- MIIBIjANBgkqhkiG9w0BAQEFAAOCAQ8AMIIBCgKCAQEAyXmJ9Np+uwExhBDQmANV aNjEkIm2gU4RJnaq65NIP0yK17246kBpbMlEAGe7ctlyxqo2Zgo+T2uwz0CjCND3 Xd631FkxQkBux6MzXkxO4T/ApxaXQxoKhPAvahTLKcOy2f/u7uS5TXZsI9/rw/AJ sT4+1egSBYQdchJKR/uIA4aj33jP/eZYj/bzeTQijdmBGdVbp8FoQ4JWwQO2YW/x EykDw+Ui77cZJOc8zED5PySbsDC/zGariXsWkaCwO552Ip+m04SJFKXb0dT0MDQ7 E1PwliI6ThEgoaEXGNZyGTd5GTUerDMPLT6jmr9b9hSqFpc3UX6VnL2uTJEJoWFE iQIDAQAB -----END PUBLIC KEY-----</Value>
+    </PublicKey>
+</VerifyJWT>

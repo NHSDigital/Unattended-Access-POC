@@ -4,6 +4,9 @@ dist/
 build/
 public/
 newman/
+.idea
+venv
+.DS_Store
 
 .#*
 
