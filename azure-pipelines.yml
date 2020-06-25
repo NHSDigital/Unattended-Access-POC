@@ -72,5 +72,20 @@ jobs:
       - bash: "make release"
         displayName: Build Release Package
 
+      - template: az/build-prereqs.yml@utils
+
+      - template: az/create-build-env-vars.yml@utils
+        parameters:
+          out_dir: 'dist'
+          service_name: 'ambulance-data'
+
+      - template: az/become-build-user.yml@utils
+        parameters:
+          env_vars_dir: 'dist'
+
+      - template: az/build-and-push-ecs-proxies.yml@utils
+        parameters:
+          env_vars_dir: 'dist'
+
       - publish: dist/
         artifact: unattended-access-poc+$(Build.BuildNumber)
