@@ -1,0 +1,5 @@
+docker_containers:
+
+    - name: unattended-access-poc
+      dockerfile: "docker/unattended-access-poc/Dockerfile"
+      path: "docker/unattended-access-poc"

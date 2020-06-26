@@ -1,5 +1,5 @@
 {
-    "mockDirectory": "./mocks",
+    "mockDirectory": "./src/mocks",
     "quiet": false,
     "port": "9000",
     "latency": 50,
