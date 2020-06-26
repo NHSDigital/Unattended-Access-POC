@@ -8,7 +8,7 @@ install-python:
 
 install-node:
 	npm install
-	cd sandbox && npm install
+	cd docker/unattended-access-poc && npm install
 
 install-hooks:
 	cp scripts/pre-commit .git/hooks/pre-commit
